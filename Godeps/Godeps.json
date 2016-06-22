@@ -1,0 +1,11 @@
+{
+	"ImportPath": "github.com/sixbyter/myblog",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/realint/dbgutil",
+			"Rev": "d9636d9b099d8ab56c49d3a9d221fa533b3bb43a"
+		}
+	]
+}
