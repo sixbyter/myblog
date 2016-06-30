@@ -9,6 +9,7 @@ import (
 var (
 	rootPath     = flag.String("r", "./public", "where is the website root path?")
 	articlesPath = flag.String("a", "./articles", "where is the articles path?")
+	serverPort   = flag.String("p", "8888", "port")
 )
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 	http.HandleFunc("/api/article", ArticleShow)
 	http.HandleFunc("/test", test)
 
-	port := "8888"
+	port := *serverPort
 	fmt.Println("开启http服务, 端口是: " + port + "网站根目录为: " + *rootPath)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
